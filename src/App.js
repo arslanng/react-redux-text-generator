@@ -10,9 +10,7 @@ function App() {
 
   const dispatch = useDispatch();
 
-  const paragraph = useSelector((state) => state.paragraph.paragraph);
-  const isLoading = useSelector((state) => state.paragraph.isLoading);
-  const error = useSelector((state) => state.paragraph.error);
+  const {paragraph, isLoading, error} = useSelector((state) => state.paragraph);
 
   useEffect(() => {
     dispatch(getParagraph(number));
